@@ -1,225 +1,289 @@
-/* General setup */
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
 
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+/*--General Setup--*/
+ * {
+font-size: 1rem;
+box-sizing: border-box;
+}
+
+/*--Layout--*/
 * {
-    box-sizing: border-box;
+    background-color:whitesmoke;
 }
 
-html {
-    font-size:16px;
+.main-section {
+    display: flex;
+    margin-left: 3rem;
+    margin-right: 1rem;
 }
 
-body {
-    margin: 1.5rem auto;
-    width:90%;
-    min-width:56.25rem;
+.article-image {
+    float: left;
+    margin-right: 1rem;
 }
 
-/* Layout */
+.subsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
-main {
-    overflow:auto;
-    min-width:45rem;
+/*--Header and Footer--*/
+
+
+.copyright {
+   float: left;
+   text-align: left;
+}
+
+.links {
+   float: right;
+   text-align: right;
+}
+
+/*---------------------------------------------------------------------*/
+
+
+
+/* Imported Typefaces */
+@font-face {
+
+    font-family:"montserrat";
+    src: url(../fonts/sans-serif/montserrat-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    
+    font-family:"lato";
+    src: url(../fonts/sans-serif/lato-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"opensans";
+    src: url(../fonts/sans-serif/opensans-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"roboto";
+    src: url(../fonts/sans-serif/roboto-regular.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+    @font-face {
+
+        font-family:"josefinslab";
+        src: url(../fonts/serif/josefinslab-regular.ttf) format('truetype');
+        font-weight:normal;
+        font-style:normal;
+    }
+
+    @font-face {
+        font-family:"robotoslab";
+        src: url(../fonts/serif/robotoslab-regular.ttf) format('truetype');
+        font-weight:normal;
+        font-style:normal;
+    }
+
+    @font-face {
+        font-family:"rozhaone";
+        src: url(../fonts/serif/rozhaone-regular.ttf) format('truetype');
+        font-weight:normal;
+        font-style:normal;
+    }
+
+    @font-face {
+        font-family:"ultra regular";
+        src: url(../fonts/serif/ultra-regular.ttf) format('truetype');
+        font-weight:normal;
+        font-style:normal;
+    }
+/* Typography Styles */
+
+h1 {
+    font-family:"opensans", Verdana, sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: black;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    transform: rotate(-5deg);
+    position: relative;
+    outline: 0;
+    padding: 1rem;
+    }
+
+.highlight {
+    font-family:"ultra regular", Times, serif;
+    font-size: 4rem;
+    border: .5rem solid maroon;
+    background-color: maroon;
+    border-top-left-radius: 10% 30%;
+    border-bottom-right-radius: 10% 30%;
+    box-shadow: black;
+    color:rgba(230, 240, 147, 0.986);
+    text-align: center;
+    margin-bottom: 1 rem;
+    transform: rotate(-5deg);
+    padding: 1rem;
     
 }
 
-section {
-    float: left;
-    min-width: 22.5rem;
-    width:50%;
-}
-
-figure {
-    width:60%;
-    margin:0 10% 0 0;
-    float:left;
-}
-
-figure img {
-    width:100%;
-    max-width:25rem;
-}
-
-figcaption {
-    margin:.375rem 0;
-}
-
-.long-list {
-    margin-top:0;
-}
-
 nav {
-    float: left;
-    width:11.25rem;
-}
-
-footer {
-    clear: both;
-    margin-top:1.5rem;
-}
-
-section, aside, nav, footer {
-  padding: .5rem;
-}
-
-/* header and footer */
-
-header, footer {
-  border-top: .125rem solid #33658A;
-  border-bottom: .125rem solid #33658A;
-}
-
-/* ------ START WRITING YOUR CODE BELOW THIS LINE ------ */
-
-/* NO changes should be made to any of the code above. */
-
-/* NOTE: While you will be using some of the same CSS properties, the VALUES 
-   may need to be different in order to style the page correctly. */
-
-/* Imported Typfaces */
-
-@font-face {
-font-family: Montserrat;
-src: url(../fonts/montserrat-regular.ttf) format('truetype');
-font-weight: normal;
-font-style:  normal;
-}
-
-@font-face{
-font-family: Josefinslab;
-src: url(../fonts/josefinslab-regular.ttf) format('truetype');
-font-weight: normal;
-font-style: normal;
+    border-top: .4rem solid grey;
+    border-bottom: .4rem solid grey;
+    word-spacing: 5rem;
+    line-height: 5rem;
+    margin-left: 4rem;
 }
 
 
-/* Typography Styles */
-
-html { 
-font-family:Montserrat, sans-serif;    
+nav a{
+    font-family: "lato", Verdana, sans-serif;
+    font-size: 2rem;
+    color: blue;
 }
 
-h1 {
-letter-spacing: .125rem;
-font-family:Josefinslab, serif;
-font-size: 3.75rem;
-margin: 1.125rem;
-text-align: center;
-}
 
 h2 {
-letter-spacing: .125rem;
-font-family:Josefinslab, serif;
-font-size: 1.5rem;
+    font-family:"roboto", Verdana, sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: 3rem;
+    margin-left: 4rem;
 }
 
-h2 + p {
-font-size: .75rem;
-letter-spacing: .03125rem;
-word-spacing: .125rem;
-text-indent: 1.5rem;
+h3 {
+    font-family: "opensans", Verdana, sans-serif;
+    font-size: 1.25rem;
+    text-align: left;
 }
 
 p {
-font-size: .75rem;
-letter-spacing: .03125rem;
-word-spacing: .125rem;
-text-indent: 1.5rem;
+    font-family: "lato", Verdana, sans-serif;
+    text-align: left;
+
 }
 
-li {
-font-size: .75rem;
-letter-spacing: .03125rem;
-word-spacing: .125rem;
+.time {
+    font-size: .75rem;
+    font-style: oblique;
+}
+
+figure {
+ margin-bottom: none;
 }
 
 figcaption {
-font-size: .75rem;
-margin-bottom: 2rem;
+    border-top: 1rem solid rgba(230, 240, 147, 0.986);
+    border-left: .0625rem solid rgba(230, 240, 147, 0.986);
+    border-right: .0625rem solid rgba(230, 240, 147, 0.986);
+    border-bottom: .0625rem solid rgba(230, 240, 147, 0.986);
+    background-color: rgba(230, 240, 147, 0.986);
 }
 
+aside {
+    margin-left: 2rem;
+    margin-right: 3rem;
+    padding-left: 1rem;
+    border-left: .03125rem solid black;
+    
+}
+
+.dots {
+    font-size: .25rem;
+}
+
+button {
+    font-family:"ultra", Times, serif;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 0.75rem solid navy;
+    background-color: navy;
+    border-top-right-radius: 10% 30%;
+    border-bottom-left-radius: 10% 30%;
+    border-top-left-radius: 5% 20%;
+    border-bottom-right-radius: 5% 20%;
+    box-shadow: black;
+    color: rgba(230, 240, 147, 0.986);
+    margin-top: 1 rem;
+}
+
+
+footer {
+    font-family: "lato", Verdana, sans-serif;
+}
+
+a {
+    font-family: Times, Georgia, serif; 
+}
 
 /* Link Styling */
 
-a {
-outline: none;
+a{
+    outline: none;
+    text-decoration-line: none;
 }
 
-a:link,
-a:visited {
-outline: none;
-color: #33658A
-}
-
-a:focus,
+a:focus, 
 a:hover {
-outline: none;
-text-decoration: none;
+    border-bottom: .0625rem solid;
+    background-color: green;
 }
 
-
-/* List Styling */
-
-ul {
-margin-top: 1rem;
-margin-bottom: 1rem;
-margin-left: 0;
-margin-right: 0;
-list-style-type: square;
+a:active {
+    background-color: purple;
 }
-
-ol {
-margin-top: 1rem;
-margin-bottom: 1rem;
-margin-left: 0;
-margin-right: 0;
-list-style-type: lowercase letter;
-}
-
-.long-list a:hover {
-text-transform: uppercase;
-}
-
-
-/* Navigation Menu */
-
-nav {
-padding-left: 0;
-margin-top: .25rem;
-}
-
-nav a {
-text-decoration: none;
-display: inline-block;
-width: 100%;
-line-height: 3;
-text-align: center;
-font-size: 1.125rem;
-margin-bottom: 1.5rem;
-border-style: solid;
-border-width: .0625rem;
-color: #33658A;
-}
-
-nav a:focus,
-nav a:hover {
-color: #FFF;
-background-color: #33658A;
-}
-
-nav a:active {
-color: #FFF;
-background-color: #000;
-}
-
-
-/* Footer Styles */
-
-footer {
-text-align: center;
-}
-
-
-
-
 
 
